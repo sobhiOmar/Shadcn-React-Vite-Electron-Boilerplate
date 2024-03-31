@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 // Native
-import { join } from 'path';
-
 // Packages
-import { BrowserWindow, app, screen, ipcMain, IpcMainEvent } from 'electron';
+// eslint-disable-next-line import/no-self-import
+import { app, BrowserWindow, ipcMain, IpcMainEvent, screen } from 'electron';
 import isDev from 'electron-is-dev';
+import { join } from 'path';
 
 function createWindow() {
   const primaryDisplay = screen.getPrimaryDisplay();

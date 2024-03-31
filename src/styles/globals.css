@@ -60,3 +60,13 @@
     @apply bg-background text-foreground;
   }
 }
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+    color: 'rgb(43, 45, 49)';
+  }
+}
+.sidebar {
+  display: block;
+  color: 'rgb(43, 45, 49)';
+}

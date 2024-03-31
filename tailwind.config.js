@@ -14,6 +14,7 @@ export default {
     },
     extend: {
       colors: {
+        'custom-gray': 'rgb(43, 45, 49)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
