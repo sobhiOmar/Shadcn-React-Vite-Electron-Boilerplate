@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -13,13 +17,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
     "noImplicitAny": true,
     "noImplicitThis": true,
     "esModuleInterop": true,
@@ -27,13 +29,31 @@
     "useUnknownInCatchVariables": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-
     /* Paths */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "src/pages/offlinePomodoro/components/Tasks/Task/index.jsx",
+    "src/pages/offlinePomodoro/components/Tasks/TaskList/context.jsx",
+    "src/pages/offlinePomodoro/components/Tasks/TaskList/index.jsx",
+    "src/pages/offlinePomodoro/components/Tasks/TaskStatusSelect/index.jsx",
+    "src/pages/offlinePomodoro/components/Tasks/TaskToggle/index.jsx",
+    "src/pages/offlinePomodoro/components/Controls.jsx",
+    "src/pages/offlinePomodoro/components/Shortcuts.jsx",
+    "src/pages/offlinePomodoro/components/TimeDisplay.jsx",
+    "src/pages/offlinePomodoro/components/ToggleSound.jsx",
+    "src/pages/offlinePomodoro/components/TypeSelect.jsx",
+    "src/pages/offlinePomodoro/containers/Pomodoro.tsx"
+  ]
 }

@@ -1,8 +1,10 @@
+import Pomodoro from '@/pages/offlinePomodoro/containers/Pomodoro';
 import { NavItem } from '@/types/nav';
 
 export const sitePaths = {
   home: '/',
   pageOne: '/PageOne',
+  Pomodoro: '/Pomodoro',
   about: '/about',
   page403: '/403',
   page404: '/404',
@@ -15,6 +17,11 @@ export const pathsArr: NavItem[] = [
     title: 'Home',
     description: 'Navigate to the home page',
     href: sitePaths.home,
+  },
+  {
+    title: 'Pomodoro',
+    description: 'go to Pomodoro page',
+    href: sitePaths.Pomodoro,
   },
   {
     title: 'Page One',
@@ -56,7 +63,7 @@ export const pathsArr: NavItem[] = [
 ];
 
 export const links = {
-  twitter: 'https://twitter.com/fahddaher',
-  github: 'https://github.com/Painkiller995',
+  twitter: 'https://twitter.com/',
+  github: 'https://github.com/',
   docs: 'https://ui.shadcn.com',
 };

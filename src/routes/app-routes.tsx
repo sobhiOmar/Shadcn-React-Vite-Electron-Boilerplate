@@ -9,7 +9,6 @@ import MainLayout from '@/layouts/main/layout';
 // ----------------------------------------------------------------------
 
 const PageOne = lazy(() => import('@/pages/page-one'));
-
 // ----------------------------------------------------------------------
 
 export const appRoutes = [

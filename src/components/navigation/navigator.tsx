@@ -7,7 +7,7 @@ import { NavDesktop } from './nav-desktop';
 import { NavMobile } from './nav-mobile';
 import Squash from './navigation-button';
 
-interface NavigatorProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface NavigatorProps extends React.HTMLAttributes<HTMLDivElement> { }
 
 export const Navigator = ({ ...other }: NavigatorProps) => {
   const [isOpen, setOpen] = useState(false);

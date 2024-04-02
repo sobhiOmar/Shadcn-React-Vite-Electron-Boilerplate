@@ -1,7 +1,8 @@
 /* eslint-disable simple-import-sort/imports */
 /* eslint-disable import/newline-after-import */
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React, { useEffect } from "react";
+import clsx from 'clsx';
 import {
   Card,
   Typography,
@@ -22,6 +23,7 @@ import {
   Cog6ToothIcon,
   InboxIcon,
   PowerIcon,
+  PuzzlePieceIcon,
 } from "@heroicons/react/24/solid";
 import {
   ChevronRightIcon,
@@ -31,23 +33,34 @@ import {
 interface SidebarProps {
   className?: string;
 }
+
 export default function Sidebar({ className, ...otherProps }: SidebarProps) {
   const [open, setOpen] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState(true);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleOpen = (value: React.SetStateAction<number>) => {
     setOpen(open === value ? 0 : value);
   };
-
+  const sidebarClass = clsx(className, 'sticky ml-5 h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5', {
+    'sm:block': window.innerWidth >= 768,
+    'hidden': window.innerWidth < 500,
+  });
 
   return (
     // <Sidebar aria-label="Sidebar" className="sticky ml-10 mt-10 hidden h-screen w-full min-w-64 max-w-80 sm:block">
-    <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
-      <div className="mb-2 p-4">
-        <Typography variant="h5" color="blue-gray">
-          Sidebar
-        </Typography>
-      </div>
+    <Card className={sidebarClass}>
       <List>
         <Accordion
           open={open === 1}
@@ -103,10 +116,10 @@ export default function Sidebar({ className, ...otherProps }: SidebarProps) {
           <ListItem className="p-0" selected={open === 2}>
             <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
               <ListItemPrefix>
-                <ShoppingBagIcon className="h-5 w-5" />
+                <PuzzlePieceIcon className="h-5 w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
-                E-Commerce
+                templates
               </Typography>
             </AccordionHeader>
           </ListItem>

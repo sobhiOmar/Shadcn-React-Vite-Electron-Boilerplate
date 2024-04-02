@@ -4,11 +4,12 @@ import { sitePaths } from '@/configurations/paths';
 // layouts
 import MainLayout from '@/layouts/main/layout';
 
+// pages
+import PomodoroTimer from '../pages/offlinePomodoro/containers/Pomodoro';
 import { appRoutes } from './app-routes';
 import { errorsRoutes } from './errors-routes';
 // config
 import { HomePage, mainRoutes } from './main-routes';
-
 // ----------------------------------------------------------------------
 
 export default function Router() {

@@ -4,26 +4,25 @@ import { Outlet } from 'react-router-dom';
 import { SplashScreen } from '@/components/loading-screen';
 import { sitePaths } from '@/configurations/paths';
 // Layout
-import MainLayout from '@/layouts/main/layout';
+import CompactLayout from '@/layouts/compact/layout';
+import Pomodoro from '@/pages/offlinePomodoro/containers/Pomodoro';
 
 // ----------------------------------------------------------------------
 
 export const HomePage = lazy(() => import('@/pages/home-page'));
 const AboutPage = lazy(() => import('@/pages/about-page'));
 
-const PageOne = lazy(() => import('@/pages/page-one'));
-
 // ----------------------------------------------------------------------
 
 export const mainRoutes = [
   {
     element: (
-      <MainLayout>
+      <CompactLayout>
         <Suspense fallback={<SplashScreen />}>
           <Outlet />
         </Suspense>
-      </MainLayout>
+      </CompactLayout>
     ),
-    children: [{ path: sitePaths.about, element: <AboutPage /> }],
+    children: [{ path: sitePaths.about, element: <AboutPage /> }, { path: sitePaths.Pomodoro, sitePaths, element: <Pomodoro /> }],
   },
 ];
