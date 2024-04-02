@@ -44,16 +44,6 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "src/pages/offlinePomodoro/components/Tasks/Task/index.jsx",
-    "src/pages/offlinePomodoro/components/Tasks/TaskList/context.jsx",
-    "src/pages/offlinePomodoro/components/Tasks/TaskList/index.jsx",
-    "src/pages/offlinePomodoro/components/Tasks/TaskStatusSelect/index.jsx",
-    "src/pages/offlinePomodoro/components/Tasks/TaskToggle/index.jsx",
-    "src/pages/offlinePomodoro/components/Controls.jsx",
-    "src/pages/offlinePomodoro/components/Shortcuts.jsx",
-    "src/pages/offlinePomodoro/components/TimeDisplay.jsx",
-    "src/pages/offlinePomodoro/components/ToggleSound.jsx",
-    "src/pages/offlinePomodoro/components/TypeSelect.jsx",
-    "src/pages/offlinePomodoro/containers/Pomodoro.tsx"
+    "**/*.jsx"
   ]
 }

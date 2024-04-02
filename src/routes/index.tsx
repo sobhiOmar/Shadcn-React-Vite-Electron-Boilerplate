@@ -5,7 +5,6 @@ import { sitePaths } from '@/configurations/paths';
 import MainLayout from '@/layouts/main/layout';
 
 // pages
-import PomodoroTimer from '../pages/offlinePomodoro/containers/Pomodoro';
 import { appRoutes } from './app-routes';
 import { errorsRoutes } from './errors-routes';
 // config

@@ -5,7 +5,6 @@ import { SplashScreen } from '@/components/loading-screen';
 import { sitePaths } from '@/configurations/paths';
 // Layout
 import CompactLayout from '@/layouts/compact/layout';
-import Pomodoro from '@/pages/offlinePomodoro/containers/Pomodoro';
 
 // ----------------------------------------------------------------------
 
@@ -23,6 +22,6 @@ export const mainRoutes = [
         </Suspense>
       </CompactLayout>
     ),
-    children: [{ path: sitePaths.about, element: <AboutPage /> }, { path: sitePaths.Pomodoro, sitePaths, element: <Pomodoro /> }],
+    children: [{ path: sitePaths.about, element: <AboutPage /> }],
   },
 ];

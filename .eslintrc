@@ -4,8 +4,20 @@
     "browser": true,
     "es2021": true
   },
-  "plugins": ["tailwindcss", "unused-imports", "@typescript-eslint", "prettier", "simple-import-sort"],
-  "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "prettier", "plugin:tailwindcss/recommended"],
+  "plugins": [
+    "tailwindcss",
+    "unused-imports",
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort"
+  ],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,7 +30,9 @@
   },
   "settings": {
     "tailwindcss": {
-      "callees": ["cn"],
+      "callees": [
+        "cn"
+      ],
       "config": "tailwind.config.js"
     },
     "import/resolver": {
@@ -96,6 +110,16 @@
         "varsIgnorePattern": "^_",
         "args": "after-used",
         "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ]
   }

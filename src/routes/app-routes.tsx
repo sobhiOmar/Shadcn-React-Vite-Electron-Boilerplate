@@ -1,12 +1,12 @@
 import { lazy, Suspense } from 'react';
+// ----------------------------------------------------------------------
 import { Outlet } from 'react-router-dom';
 
 import { SplashScreen } from '@/components/loading-screen';
 import { sitePaths } from '@/configurations/paths';
 // Layout
 import MainLayout from '@/layouts/main/layout';
-
-// ----------------------------------------------------------------------
+import SimpleLayout from '@/layouts/simple/layout';
 
 const PageOne = lazy(() => import('@/pages/page-one'));
 // ----------------------------------------------------------------------
@@ -20,6 +20,12 @@ export const appRoutes = [
         </Suspense>
       </MainLayout>
     ),
-    children: [{ path: sitePaths.pageOne, element: <PageOne /> }],
+    children: [{
+      path: sitePaths.pageOne, element: (
+        <SimpleLayout>
+          <PageOne />
+        </SimpleLayout>
+      )
+    }],
   },
 ];
