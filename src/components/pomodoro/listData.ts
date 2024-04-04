@@ -1,6 +1,6 @@
 import { List, Todo } from '@/types/types';
 
-const initialLists: List[] = [
+export const initialLists: List[] = [
   {
     id: 'list-1',
     title: 'List 1',

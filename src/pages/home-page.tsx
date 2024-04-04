@@ -1,13 +1,12 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
-import List from '@/components/pomodoro/list';
-import { buttonVariants } from '@/components/ui/button';
 import { sitePaths } from '@/configurations/paths';
+
+import List from '../components/pomodoro/main';
 
 export default function HomePage() {
   return (
-    <div className='w-screen h-screen bg-slate-500'>
+    <div className='h-screen w-screen bg-slate-500'>
       <Helmet>
         <title>Welcome to Our Website</title>
       </Helmet>
