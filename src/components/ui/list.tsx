@@ -4,7 +4,7 @@ import { DraggableProvided, Droppable } from 'react-beautiful-dnd';
 
 import { List as ListType } from '@/types/types';
 
-import Card from './card';
+import { Card } from './card';
 
 interface ListProps {
   list: ListType;
