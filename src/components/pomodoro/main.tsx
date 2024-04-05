@@ -2,7 +2,7 @@
 import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 
-import List from './List';
+import List from './list';
 import { useDragAndDrop } from './useDragAndDrop';
 
 const App: React.FC = () => {
