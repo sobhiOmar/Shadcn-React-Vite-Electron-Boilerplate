@@ -4,7 +4,7 @@ import { sitePaths } from '@/configurations/paths';
 // layouts
 import MainLayout from '@/layouts/main/layout';
 // ----------------------------------------------------------------------
-import LoginForm from '@/pages/forms/login';
+import SignupForm from '@/pages/forms/signup';
 
 // pages
 import { appRoutes } from './app-routes';
@@ -18,7 +18,7 @@ export default function Router() {
       path: sitePaths.home,
       element: (
         <MainLayout>
-          <LoginForm />
+          <SignupForm />
         </MainLayout>
       ),
     },

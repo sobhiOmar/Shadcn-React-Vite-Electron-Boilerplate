@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import { signup } from '@/components/api/api'
 
@@ -8,6 +9,8 @@ function SignupForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -38,6 +41,8 @@ function SignupForm() {
       console.log(response.data);
       if (response.data.success) {
         // redirect to the login page
+        console.log('Signup successful');
+        navigate('/login');
       }
     } catch (error) {
       console.error(error);
